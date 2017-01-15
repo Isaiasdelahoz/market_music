@@ -4,6 +4,7 @@ class CreateAdvertisements < ActiveRecord::Migration[5.0]
       t.string :name 
       t.string  :description 
       t.integer :price 
+      t.string :ubication
       t.string :phone 
       t.timestamps
     end
