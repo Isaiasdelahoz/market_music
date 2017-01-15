@@ -3,7 +3,9 @@
 <p>Description: <%= @advertisement.description%></p>
 <p>price: <%=@advertisement.price %></p>
 <p>phone: <%=@advertisement.phone %></p>
+<p>ubication: <%=@advertisement.ubication %></p>
 <p>category: <%= link_to(@advertisement.category.name, category_path(@advertisement.category.id)) %></p>
 
-
-<%= link_to('Back', advertisements_path) %>
+<%= link_to('Delete', advertisement_path(@advertisement), {method: :delete}) %>
+<%= link_to('edit', edit_advertisement_path(@advertisement)) %>
+<%= link_to('Back', category_path(@advertisement.category.id)) %>

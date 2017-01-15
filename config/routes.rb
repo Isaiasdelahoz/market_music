@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   root "categories#index"
 
-  resources :advertisements, only: [:index, :show, :create, :new, ]
+  resources :advertisements, only: [:index, :show, :create, :new, :edit, :destroy, :update]
   resources :categories, only: [:index, :show, :create, :new, :update, :destroy, :edit]
 end
