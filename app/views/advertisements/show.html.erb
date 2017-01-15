@@ -1,0 +1,9 @@
+<h2><%= @advertisement.name %></h2>
+
+<p>Description: <%= @advertisement.description%></p>
+<p>price: <%=@advertisement.price %></p>
+<p>phone: <%=@advertisement.phone %></p>
+<p>category: <%= link_to(@advertisement.category.name, category_path(@advertisement.category.id)) %></p>
+
+
+<%= link_to('Back', advertisements_path) %>

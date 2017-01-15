@@ -1,0 +1,9 @@
+<h2>Advertisements</h2>
+
+<ul>
+  <% @advertisement.each do |advertisement| %>
+    <li><%= link_to(advertisement.name, advertisement) %></li>
+  <% end %>
+</ul>
+
+<%= link_to('añadir un nuevo producto', new_advertisement_path) %>

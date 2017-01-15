@@ -1,0 +1,17 @@
+<%= form_for(@advertisement, url: {action: 'create'})  do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :price %>
+  <%= form.text_field :price %>
+  <br>
+  <%= form.label :phone %>
+  <%= form.text_field :phone %>
+  <br>
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+  <br>
+  <%= form.hidden_field :category_id %>
+
+  <%= form.submit %>
+<% end %>
