@@ -13,12 +13,20 @@ class AdvertisementsController < ApplicationController
   end 
   
   def create 
-    @advertisement = Advertisement.create(advertisement_params) 
-    render :show 
-  end 
+    @advertisement = Advertisement.new(advertisement_params) 
+    
+    if @advertisement.save 
+    render :show
+    else
+      render :new
+    end
+
+    end 
+
   def edit 
     @advertisement = Advertisement.find(params[:id])
-  end 
+  end
+   
   def update
     @advertisement = Advertisement.find(params[:id])
     @advertisement.update_attributes(advertisement_params) 
@@ -33,6 +41,6 @@ class AdvertisementsController < ApplicationController
   private
 
   def advertisement_params
-    params.require(:advertisement).permit(:price, :name, :description, :phone, :category_id, :ubication)
+    params.require(:advertisement).permit(:price, :name, :description, :phone, :category_id, :ubication, :avatar)
   end
 end

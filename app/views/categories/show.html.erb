@@ -2,7 +2,7 @@
 
 <ul>
   <% @category.advertisements.each do |advertisement| %>
-    <li><%= link_to(advertisement.name, advertisement) %></li>
+    <li><%= link_to(advertisement.name, advertisement) %><%= image_tag advertisement.avatar.url(:thumb) %></li>
   <% end %>
 </ul>
 

@@ -1,4 +1,10 @@
 <%= form_for(@advertisement, url: {action: 'create'})  do |form| %>
+  <% if @advertisement.errors.any? %>
+  <p><%= @advertisement.errors.full_messages.to_sentence %></p>
+   <% end %>
+   <%= form.label :avatar %>
+   <%= form.file_field :avatar %>
+   <br>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <br>
@@ -10,10 +16,10 @@
   <br>
   <%= form.label :description %>
   <%= form.text_area :description %>
+  
   <br>  <%= form.label :ubication %>
   <%= form.text_field :ubication %>
   <br>
   <%= form.hidden_field :category_id %>
-
   <%= form.submit %>
 <% end %>

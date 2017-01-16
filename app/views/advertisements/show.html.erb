@@ -1,6 +1,7 @@
 <h2><%= @advertisement.name %></h2>
 
 <p>Description: <%= @advertisement.description%></p>
+<%= image_tag @advertisement.avatar.url %>
 <p>price: <%=@advertisement.price %></p>
 <p>phone: <%=@advertisement.phone %></p>
 <p>ubication: <%=@advertisement.ubication %></p>

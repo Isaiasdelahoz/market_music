@@ -13,8 +13,13 @@ class CategoriesController < ApplicationController
   end 
   
   def create 
-    @category = Category.create(category_params) 
-    render :show 
+    @category = Category.new(category_params) 
+
+    if @category.save
+      render :show 
+    else
+      render :new
+    end
   end
 
   def edit
