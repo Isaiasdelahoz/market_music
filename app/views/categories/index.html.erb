@@ -1,3 +1,9 @@
+<% if user_signed_in? %>
+ <%else%>
+ <p><%= link_to "Ingresar", new_user_session_path %><p>
+<p><%= link_to "Create Account", new_user_registration_path %><p>
+<% end %>
+
 <h2>Categories</h2>
 
 <ul>
@@ -6,4 +12,8 @@
   <% end %>
 </ul>
 
+<% if user_signed_in? %>
 <%= link_to('Add a new category', new_category_path) %>
+ <%else%>
+<% end %>
+

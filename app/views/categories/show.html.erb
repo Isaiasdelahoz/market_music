@@ -5,8 +5,11 @@
     <li><%= link_to(advertisement.name, advertisement) %><%= image_tag advertisement.avatar.url(:thumb) %></li>
   <% end %>
 </ul>
-
+<% if signed_in? %>
 <%= link_to('Edit category', edit_category_path(@category)) %>
 <%= link_to('delete category', category_path(@category.id), {method: :delete}) %>
-<%= link_to('Back', categories_path) %>
 <%= link_to('Add new product', new_advertisement_path({category_id: @category.id})) %>
+<% end %>
+
+<%= link_to('Back', categories_path) %>
+

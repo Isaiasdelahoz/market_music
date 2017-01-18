@@ -6,7 +6,8 @@
 <p>phone: <%=@advertisement.phone %></p>
 <p>ubication: <%=@advertisement.ubication %></p>
 <p>category: <%= link_to(@advertisement.category.name, category_path(@advertisement.category.id)) %></p>
-
+<% if signed_in? %>
 <%= link_to('Delete', advertisement_path(@advertisement), {method: :delete}) %>
 <%= link_to('edit', edit_advertisement_path(@advertisement)) %>
+<% end %>
 <%= link_to('Back', category_path(@advertisement.category.id)) %>

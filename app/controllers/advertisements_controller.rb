@@ -1,4 +1,7 @@
 class AdvertisementsController < ApplicationController
+  
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index 
     @advertisement = Advertisement.all
   end
