@@ -1,8 +1,0 @@
-<%= form_for(@category, url: {action: 'create'})  do |form| %>
-  <% if @category.errors.any? %>
-    <p><%= @category.errors.full_messages.to_sentence %></p>
-  <% end %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.submit %>
-<% end %>

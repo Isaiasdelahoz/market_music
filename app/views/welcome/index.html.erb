@@ -1,9 +1,0 @@
-<% if user_signed_in? %>
-    <p> Welcome <%= current_user.email %> </p>
-<p><%=link_to "Cerrar sesion", destroy_user_session_path, method: :delete %><p>
-    <%else%>
-    <p><%= link_to "Ingresar", new_user_session_path %><p>
-    <p><%= link_to "Create Account", new_user_registration_path %><p>
-    
-
-  <% end %>
