@@ -2,6 +2,6 @@
 
 <ul>
   <% @advertisement.each do |advertisement| %>
-    <li><%= advertisement.name %></li>
+    <li><%= link_to(advertisement.name, advertisement) %></li>
   <% end %>
 </ul>

@@ -6,8 +6,7 @@ development:
 
 test:
  adapter: postgresql
- database: market_music_development
+ database: market_music_test
  host: localhost
  pool: 5
-
 

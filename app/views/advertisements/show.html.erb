@@ -5,7 +5,7 @@
 <p>price: <%=@advertisement.price %></p>
 <p>phone: <%=@advertisement.phone %></p>
 <p>ubication: <%=@advertisement.ubication %></p>
-<% if signed_in? %>
+<% if user_signed_in? && @advertisement.belongs_to_user?(current_user) %>
 <%= link_to('Delete', advertisement_path(@advertisement), {method: :delete}) %>
 <%= link_to('edit', edit_advertisement_path(@advertisement)) %>
 <% end %>
