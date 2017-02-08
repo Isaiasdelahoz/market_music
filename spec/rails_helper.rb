@@ -8,6 +8,7 @@ require 'rspec/rails'
 require 'database_cleaner'
 require 'pry'
 require 'factory_girl'
+require 'capybara/rails'
 Dir[Rails.root.join("spec/factories/**/*.rb")].each {|f| require f}
 # Add additional requires below this line. Rails is not loaded until this point!
 
